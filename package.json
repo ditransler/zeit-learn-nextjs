@@ -1,0 +1,20 @@
+{
+  "name": "markup-style-and-fashion-boutique",
+  "version": "0.0.1",
+  "description": "Test markup of the main page for a boutique concept using Next.js and CSS Grid",
+  "private": true,
+  "scripts": {
+    "dev": "next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ditransler/markup-style-and-fashion-boutique.git"
+  },
+  "author": "Dmitriy Beglov",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^4.2.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

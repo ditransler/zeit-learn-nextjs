@@ -1,0 +1,17 @@
+# Build
+.next/
+
+# Dependencies
+node_modules/
+
+# IDE/Editors
+.idea
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# Misc
+.DS_Store
+Thumbs.db
