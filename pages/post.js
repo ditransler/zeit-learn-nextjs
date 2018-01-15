@@ -1,31 +1,39 @@
 import Layout from '../components/MyLayout';
-import fetch from 'isomorphic-unfetch';
+import Markdown from 'react-markdown';
 
-const Content = (props) => {
-    const { show } = props;
-    return (
-        <div>
-            <h1>{show.name}</h1>
-            <p>{show.summary.replace(/<[/]?p>/g, '')}</p>
-            <img src={show.image.medium} />
-        </div>
-    );
-};
-
-const Post = (props) => (
+export default (props) => (
     <Layout>
-        <Content show={props.show} />
+        <h1>{props.url.query.title}</h1>
+        <div className="markdown">
+            <Markdown source={`
+This is our blog post.
+Yes. We can have a [link](/link).
+And we can have a title as well.
+
+### This is a title
+
+And here's the content.
+            `} />
+        </div>
+        <style jsx global>{`
+            .markdown {
+                font-family: 'Arial';
+            }
+
+            .markdown a {
+                text-decoration: none;
+                color: blue;
+            }
+
+            .markdown a:hover {
+                opacity: 0.6;
+            }
+
+            .markdown h3 {
+                margin: 0;
+                padding: 0;
+                text-transform: uppercase;
+            }
+        `}</style>
     </Layout>
-);
-
-Post.getInitialProps = async function (context) {
-    const { id } = context.query;
-    const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
-    const show = await res.json();
-
-    console.log(`Fetched show: ${show.name}`);
-
-    return { show };
-}
-
-export default Post;
+)
