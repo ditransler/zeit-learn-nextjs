@@ -4,7 +4,9 @@
   "description": "Test markup of the main page for a boutique concept using Next.js and CSS Grid",
   "private": true,
   "scripts": {
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start -p 8000"
   },
   "repository": {
     "type": "git",
