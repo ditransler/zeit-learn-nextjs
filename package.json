@@ -1,7 +1,7 @@
 {
-  "name": "markup-style-and-fashion-boutique",
+  "name": "zeit-learn-nextjs",
   "version": "0.0.1",
-  "description": "Test markup of the main page for a boutique concept using Next.js and CSS Grid",
+  "description": "Edu project for the Learn Next.js course by ZEIT",
   "private": true,
   "scripts": {
     "dev": "node server.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ditransler/markup-style-and-fashion-boutique.git"
+    "url": "git+https://github.com/ditransler/zeit-learn-nextjs.git"
   },
   "author": "Dmitriy Beglov",
   "license": "MIT",
